@@ -2,6 +2,7 @@
 # Introduction To React Native
 
 Post Link : https://www.skptricks.com/2018/06/introduction-to-react-native.html
+
 React Native promoted by facebook is a Javascript framework for rendering mobile application in iOS and Android. React is basically a javascript library for building user interfaces which targets mobile platforms. So the question is how good it is?
 
 It is definitely an interesting framework that helps web developers to create robust mobile applications using their existing Javascript libraries. The bonus point over it is that: it is faster mobile development, more efficient code sharing across cross platforms like iOS, Android and the web without sacrificing the end user’s experience or application quality. If your developers can handle the uncertainty that comes with working with a new technology, and wants to develop mobile applications for more than just one platform, you should be looking at React Native.
