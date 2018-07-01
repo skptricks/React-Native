@@ -1,1 +1,10 @@
 
+Post Link : 
+
+In this tutorial we will explain how to display image in react native application using HTTP URL. This example covers, fetching and displaying an image from network location using Image Component of react native.
+
+
+
+Point To Remember while loading image in Image Component.
+
+Note that for network and data images, you will need to manually specify the dimensions of your image!
