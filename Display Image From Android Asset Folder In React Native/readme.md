@@ -1,7 +1,7 @@
 
 # Display Image From Android Asset Folder In React Native
 
-Post Link : 
+Post Link : https://www.skptricks.com/2018/07/display-image-from-android-asset-folder-in-react-native.html
 
 This tutorial explains how to get image from the android asset folder and display the image in react native application. This example covers, fetching and displaying an image from network location using Image Component of react native.
 React native provides a unified media management system so developers can easily manage all the image files by placing them together into a single folder. So here is the complete step by step tutorial to display Image from Android Asset Folder in react native application.
