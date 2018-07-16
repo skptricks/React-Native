@@ -1,6 +1,7 @@
 
 # React Native Header Bar Example Using React Navigation
 
+Post Link : https://www.skptricks.com/2018/07/react-native-header-bar-example-using-createStackNavigator.html
 
 In this tutorial, We are going to share some idea how to create header bar in react native application using React Navigation Library.
 In a web browser, you can link to different pages using an anchor (<a>) tag. When the user clicks on a link, the URL is pushed to the browser history stack. When the user presses the back button, the browser pops the item from the top of the history stack.
