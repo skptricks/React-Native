@@ -11,3 +11,6 @@ Props provide configurability for several features, such as auto-correction, aut
 
 #demo : 
 <iframe width="520" height="266" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/ZcERK3d_e54/0.jpg" src="https://www.youtube.com/embed/ZcERK3d_e54?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
+
+[linkname](https://youtu.be/ZcERK3d_e54)
