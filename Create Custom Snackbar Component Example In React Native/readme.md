@@ -1,4 +1,4 @@
-#Create Custom Snackbar Component Example In React Native
+# Create Custom Snackbar Component Example In React Native
 
 Post Link : https://www.skptricks.com/2018/10/create-custom-snackbar-component-in-react-native.html
 
