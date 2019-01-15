@@ -1,0 +1,31 @@
+{
+  "name": "MobileApp56",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+  },
+  "dependencies": {
+    "husky": "^1.2.1",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-animated-emoji": "^0.1.0",
+    "react-native-circle-drawer": "^1.0.0",
+    "react-native-popup-menu": "^0.14.0",
+    "react-native-scalable-image": "^0.4.0",
+    "react-navigation": "^2.6.2"
+  },
+  "devDependencies": {
+    "babel-jest": "23.2.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "23.3.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
