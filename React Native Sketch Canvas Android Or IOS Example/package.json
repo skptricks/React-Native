@@ -1,0 +1,28 @@
+{
+  "name": "RNV58",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@terrylinla/react-native-sketch-canvas": "^0.8.0",
+    "react": "16.6.3",
+    "react-native": "0.58.1",
+    "react-native-gesture-handler": "^1.0.15",
+    "react-navigation": "^3.2.0",
+    "realm": "^2.22.0"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.0.0",
+    "jest": "24.0.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
