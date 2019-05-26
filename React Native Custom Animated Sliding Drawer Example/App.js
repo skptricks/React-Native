@@ -5,16 +5,44 @@ import { AppRegistry, Text, View, Animated, Image, TouchableOpacity, StyleSheet,
 const DRAWER_WIDTH = 300;
 
 export default class App extends Component {
-
+  
   constructor() {
     super();
 
-    this.state = { hidePassword: true }
+    this.animatedValue = new Animated.Value(0);
+    this.state = { disabled: false }
+    this.toggleFlag = 0;
   }
 
-  managePasswordVisibility = () =>
-  {
-    this.setState({ hidePassword: !this.state.hidePassword });
+  toggleDrawer = () => {
+    if (this.toggleFlag == 0) {
+      this.setState({ disabled: true }, () => {
+        Animated.timing(
+          this.animatedValue,
+          {
+            toValue: 1,
+            duration: 250
+          }
+        ).start(() => {
+          this.setState({ disabled: false });
+          this.toggleFlag = 1;
+        });
+      });
+    }
+    else {
+      this.setState({ disabled: true }, () => {
+        Animated.timing(
+          this.animatedValue,
+          {
+            toValue: 0,
+            duration: 250
+          }
+        ).start(() => {
+          this.setState({ disabled: false });
+          this.toggleFlag = 0;
+        });
+      });
+    }
   }
 
 
@@ -28,12 +56,18 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={styles.textBoxBtnHolder}>
-          <TextInput underlineColorAndroid="transparent" secureTextEntry={this.state.hidePassword} style={styles.textBox} />
-          <TouchableOpacity activeOpacity={0.8} style={styles.visibilityBtn} onPress={this.managePasswordVisibility}>
-            <Image source={(this.state.hidePassword) ? require('./assets/hide.png') : require('./assets/view.png')} style={styles.btnImage} />
+        <Text style={styles.headerText}>Animated Sliding Drawer Tutorial.</Text>
+        <Animated.View style={[styles.drawer, { transform: [{ translateX: animatedValue }] }]}>
+          <TouchableOpacity disabled={this.state.disabled} onPress={this.toggleDrawer} style={{ padding: 8 }}>
+            <Image source={require('./images/menu.png')} style={{ width: 30, height: 30, resizeMode: 'contain' }} />
           </TouchableOpacity>
-        </View>
+          <View style={styles.drawerContainer}>
+            <Text style={styles.menuLayout}>Buy Now</Text>
+            <Text style={styles.menuLayout}>Offer Zone</Text>
+            <Text style={styles.menuLayout}>Qualty Product</Text>
+            <Text style={styles.menuLayout}>50% Off</Text>
+          </View>
+        </Animated.View>
       </View>
     );
   }
@@ -54,41 +88,26 @@ const styles = StyleSheet.create(
       color: 'black',
       fontWeight: "bold"
     },
-    textBoxBtnHolder:
-  {
-    position: 'relative',
-    alignSelf: 'stretch',
-    justifyContent: 'center'
-  },
-
-  textBox:
-  {
-    fontSize: 18,
-    alignSelf: 'stretch',
-    height: 45,
-    paddingRight: 45,
-    paddingLeft: 8,
-    borderWidth: 1,
-    paddingVertical: 0,
-    borderColor: 'grey',
-    borderRadius: 5
-  },
-
-  visibilityBtn:
-  {
-    position: 'absolute',
-    right: 3,
-    height: 40,
-    width: 35,
-    padding: 5
-  },
-
-  btnImage:
-  {
-    resizeMode: 'contain',
-    height: '100%',
-    width: '100%'
-  }
+    drawer: {
+      position: 'absolute',
+      top: (Platform.OS == 'ios') ? 20 : 0,
+      right: 0,
+      bottom: 0,
+      width: DRAWER_WIDTH,
+      flexDirection: 'row'
+    },
+    drawerContainer: {
+      flex: 1,
+      backgroundColor: '#f53b3b',
+      alignItems: 'center'
+    },
+    menuLayout: {
+      marginBottom: 1,
+      backgroundColor: '#4CAF50',
+      width: '100%',
+      fontSize: 25,
+      color: 'white',
+      padding: 10,
+    }
 
   });
-
