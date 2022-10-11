@@ -10,7 +10,7 @@
   "dependencies": {
     "@terrylinla/react-native-sketch-canvas": "^0.8.0",
     "react": "16.6.3",
-    "react-native": "0.58.1",
+    "react-native": "0.70.2",
     "react-native-gesture-handler": "^1.0.15",
     "react-navigation": "^3.2.0",
     "realm": "^2.22.0"
