@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "husky": "^1.2.1",
-    "lint-staged": "^8.1.0",
+    "lint-staged": "^13.1.0",
     "prettier": "^1.15.3",
     "react": "16.3.1",
     "react-native": "0.55.4",
